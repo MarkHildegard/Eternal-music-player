@@ -1,8 +1,8 @@
-/* Hintergrund */
+/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background: linear-gradient(45deg, #1e1e1e, #333);
+    background: linear-gradient(45deg, #282828, #333);
     color: white;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
 .container {
     max-width: 600px;
     margin: 50px auto;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
@@ -20,50 +20,50 @@ body {
 }
 
 .container:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 /* Überschriften */
 h1 {
-    font-size: 28px;
+    font-size: 32px;
     color: #f1c40f;
-    text-shadow: 2px 2px 5px rgba(241, 196, 15, 0.5);
+    text-shadow: 3px 3px 8px rgba(241, 196, 15, 0.5);
 }
 
 h3 {
     margin-top: 20px;
     color: #1abc9c;
-    text-shadow: 1px 1px 3px rgba(26, 188, 156, 0.5);
+    text-shadow: 1px 1px 4px rgba(26, 188, 156, 0.7);
 }
 
 /* Player Styling */
 #player {
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     background: #222;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
 }
 
 #loop-btn {
-    background: #1abc9c;
+    background: #16a085;
     color: white;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px 20px;
+    margin-top: 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 #loop-btn:hover {
-    background: #16a085;
+    background: #1abc9c;
 }
 
 /* Lautstärkeregler */
 #volume-slider {
     width: 100px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 /* Playlist */
@@ -73,10 +73,10 @@ ul {
 }
 
 li {
-    padding: 10px;
-    margin: 5px 0;
-    background: #333;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 8px 0;
+    background: #444;
+    border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s, background 0.3s;
     display: flex;
@@ -93,19 +93,19 @@ li:hover {
 .fav-btn {
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     color: white;
     transition: 0.3s;
 }
 
 .fav-btn:hover {
-    color: yellow;
+    color: #f39c12;
 }
 
 /* Wenn Song favorisiert wurde */
 .fav-active {
-    color: red;
+    color: #e74c3c;
 }
 
 /* Animationen */
