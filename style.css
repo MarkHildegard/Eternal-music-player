@@ -1,19 +1,36 @@
+/* Hintergrund mit animiertem Farbverlauf */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e90ff, #00c853);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/* Animierte Farbverläufe */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .container {
     max-width: 500px;
     margin: 50px auto;
-    background: #1e1e1e;
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-In Effekt für die Box */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 h1 {
@@ -51,10 +68,12 @@ audio {
     background: #cc0000;
 }
 
+/* Grüner Loop-Button wenn aktiv */
 .loop-active {
-    background: #00c853; /* Grün wenn Loop aktiv */
+    background: #00c853;
 }
 
+/* Playlist-Styling */
 h3 {
     margin-top: 20px;
 }
@@ -65,7 +84,7 @@ h3 {
 }
 
 #playlist li {
-    background: #333;
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
@@ -74,5 +93,6 @@ h3 {
 }
 
 #playlist li:hover {
-    background: #555;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
