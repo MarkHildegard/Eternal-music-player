@@ -15,7 +15,11 @@
         <div id="player">
             <h2 id="song-title">Kein Song ausgewählt</h2>
             <audio id="audio" controls></audio>
-            <button id="loop-btn" onclick="toggleLoop()">🔁 Loop aus</button>
+
+            <div class="controls">
+                <button id="loop-btn" onclick="toggleLoop()">🔁 Loop aus</button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" onchange="setVolume(this.value)">
+            </div>
         </div>
 
         <h3>🎼 Playlist</h3>

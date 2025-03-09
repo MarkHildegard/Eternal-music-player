@@ -1,5 +1,6 @@
 let audio = document.getElementById("audio");
 let loopButton = document.getElementById("loop-btn");
+let volumeSlider = document.getElementById("volume-slider");
 let favoritesList = document.getElementById("favorites");
 
 // Lade gespeicherte Favoriten aus localStorage
@@ -26,6 +27,11 @@ function toggleLoop() {
         loopButton.textContent = "🔁 Loop aus";
         loopButton.classList.remove("loop-active");
     }
+}
+
+// Lautstärke ändern
+function setVolume(volume) {
+    audio.volume = volume;
 }
 
 // Song zu Favoriten hinzufügen/entfernen
