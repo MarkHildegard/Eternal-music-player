@@ -1,35 +1,56 @@
+/* Allgemeine Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #181818;
+    background: linear-gradient(45deg, #1DB954, #191414);
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
     color: #1DB954;
+    font-size: 2em;
 }
 
+/* Musik-Player */
 #player {
     margin: 20px auto;
-    padding: 20px;
-    width: 300px;
+    padding: 15px;
     background: #282828;
     border-radius: 10px;
 }
 
+audio {
+    width: 100%;
+    outline: none;
+}
+
+/* Playlist */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    padding: 10px;
+    padding: 12px;
     background: #333;
-    margin: 5px;
-    border-radius: 5px;
+    margin: 8px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 li:hover {
     background: #1DB954;
+    transform: scale(1.05);
 }

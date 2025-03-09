@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Meine Musik-Website 🎵</h1>
-    
-    <div id="player">
-        <h2 id="song-title">Kein Song ausgewählt</h2>
-        <audio id="audio" controls></audio>
-    </div>
+    <div class="container">
+        <h1>🎶 Meine Musik-Website</h1>
+        
+        <div id="player">
+            <h2 id="song-title">Kein Song ausgewählt</h2>
+            <audio id="audio" controls></audio>
+        </div>
 
-    <h3>Playlist:</h3>
-    <ul id="playlist">
-        <li onclick="playSong('song1.mp3', 'Emrace IT')">🎶 Song 1</li>
-        <li onclick="playSong('song2.mp3', 'Memory Funk 1H')">🎶 Song 2</li>
-        <li onclick="playSong('song3.mp3', 'Song 3')">🎶 Song 3</li>
-    </ul>
+        <h3>🎵 Playlist</h3>
+        <ul id="playlist">
+            <li onclick="playSong('song1.mp3', 'Embrace IT')">▶ Embrace IT</li>
+            <li onclick="playSong('song2.mp3', 'Memory Funk 1H')">▶ Memory Funk 1H</li>
+            <li onclick="playSong('song3.mp3', 'Song 3')">▶ Song 3</li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
