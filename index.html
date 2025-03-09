@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div> <!-- Animierter Hintergrund -->
+    <div class="background"></div>
     
     <div class="container">
         <h1>🎵 Eternal Music Player</h1>
@@ -20,10 +20,22 @@
 
         <h3>🎼 Playlist</h3>
         <ul id="playlist">
-            <li onclick="playSong('song1.mp3', 'Coming...')">▶ Coming...</li>
-            <li onclick="playSong('song2.mp3', 'Memory Funk 1H')">▶ Memory Funk 1H</li>
-            <li onclick="playSong('song3.mp3', 'Funk De Beleza (Slowed)')">▶ Funk De Beleza (Slowed)</li>
+            <li>
+                <span onclick="playSong('song1.mp3', 'Coming...')">▶ Coming...</span>
+                <button class="fav-btn" onclick="toggleFavorite('song1.mp3', 'Coming...')">❤️</button>
+            </li>
+            <li>
+                <span onclick="playSong('song2.mp3', 'Memory Funk 1H')">▶ Memory Funk 1H</span>
+                <button class="fav-btn" onclick="toggleFavorite('song2.mp3', 'Memory Funk 1H')">❤️</button>
+            </li>
+            <li>
+                <span onclick="playSong('song3.mp3', 'Funk De Beleza (Slowed)')">▶ Funk De Beleza (Slowed)</span>
+                <button class="fav-btn" onclick="toggleFavorite('song3.mp3', 'Funk De Beleza (Slowed)')">❤️</button>
+            </li>
         </ul>
+
+        <h3>⭐ Lieblingssongs</h3>
+        <ul id="favorites"></ul>
     </div>
 
     <script src="script.js"></script>
