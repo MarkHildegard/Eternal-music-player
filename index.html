@@ -3,42 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternal Music Player</title>
+    <title>Musik Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
-    
     <div class="container">
-        <h1>🎵 Eternal Music Player</h1>
-        
-        <div id="player">
-            <h2 id="song-title">Kein Song ausgewählt</h2>
-            <audio id="audio" controls></audio>
+        <h1>🎵 Eternal Musik Player</h1>
+        <h3 id="song-title">Kein Song ausgewählt</h3>
 
-            <div class="controls">
-                <button id="loop-btn" onclick="toggleLoop()">🔁 Loop aus</button>
-                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" onchange="setVolume(this.value)">
-            </div>
+        <div id="player">
+            <audio id="audio" controls></audio>
+            <br>
+            <button id="loop-btn" onclick="toggleLoop()">🔁 Loop aus</button>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume(this.value)">
         </div>
 
-        <h3>🎼 Playlist</h3>
+        <h3>Playlist</h3>
         <ul id="playlist">
-            <li>
-                <span onclick="playSong('song1.mp3', 'Coming...')">▶ Coming...</span>
-                <button class="fav-btn" onclick="toggleFavorite('song1.mp3', 'Coming...')">❤️</button>
-            </li>
-            <li>
-                <span onclick="playSong('song2.mp3', 'Memory Funk 1H')">▶ Memory Funk 1H</span>
-                <button class="fav-btn" onclick="toggleFavorite('song2.mp3', 'Memory Funk 1H')">❤️</button>
-            </li>
-            <li>
-                <span onclick="playSong('song3.mp3', 'Funk De Beleza (Slowed)')">▶ Funk De Beleza (Slowed)</span>
-                <button class="fav-btn" onclick="toggleFavorite('song3.mp3', 'Funk De Beleza (Slowed)')">❤️</button>
-            </li>
+            <li onclick="playSong('song1.mp3', 'coming..')">🎶 coming...</li>
+            <li onclick="playSong('song2.mp3', 'Memory FUNK 1H')">🎶 Memory FUNK 1H</li>
+            <li onclick="playSong('song3.mp3', 'Funk De Beleza (slowed)')">🎶Funk De Beleza (slowed)</li>
         </ul>
 
-        <h3>⭐ Lieblingssongs</h3>
+        <h3>Favoriten</h3>
         <ul id="favorites"></ul>
     </div>
 
